@@ -1,5 +1,13 @@
-info:
-  name:jojo
-  age:21
-  addr:beijing
-  id:1
+server:
+  port: 7777
+spring:
+  application:
+    name: xiao-zhao-config #注册进Eureka服务器的微服务名
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/xiaozhao199101/config.git #GitHub上面的git仓库名字
+          search-paths:
+            - config
+      label: master #读取分支
